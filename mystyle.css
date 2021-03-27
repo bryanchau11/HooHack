@@ -29,8 +29,8 @@ body {
 }
 
 a {
-    background-color: #85dcb8;
-    box-shadow: 0 5px 0 darkred;
+    /* background-color: #85dcb8; */
+    /* box-shadow: 0 5px 0 darkred; */
     color: white;
     padding: 1em 1.5em;
     /* margin-top: 5000px; */
@@ -39,7 +39,7 @@ a {
     text-transform: uppercase;
   }
   
-  a:hover {
+  /* a:hover {
     background-color: #ce0606;
     cursor: pointer;
   }
@@ -47,10 +47,10 @@ a {
   a:active {
     box-shadow: none;
     top: 5px;
-  }
+  } */
 
   .login_logout{
-    border: 3px solid red;
+    /* border: 3px solid red; */
     /* width:50%; */
     float: right;
     text-align: right;
