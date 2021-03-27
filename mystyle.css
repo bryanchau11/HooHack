@@ -1,9 +1,9 @@
 body {
-    background-image: url(background.jpg);
+    /* background-image: url(background.jpg); */
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Courier New', Courier, monospace;
-    background-color: navy;
+    background-color: #85dcb8;
     color: navy;
 }
 
@@ -29,7 +29,7 @@ body {
 }
 
 a {
-    background-color: red;
+    background-color: #85dcb8;
     box-shadow: 0 5px 0 darkred;
     color: white;
     padding: 1em 1.5em;
