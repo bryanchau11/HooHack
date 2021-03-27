@@ -3,12 +3,12 @@ body {
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Courier New', Courier, monospace;
-    background-color: #85dcb8;
+    background-color: #00202E;
     color: navy;
 }
 
 .logo {
-    padding-top: 4.3%;
+    /* padding-top: 4.3%; */
     width: 100%;
     height: 50%;
     display: block;
