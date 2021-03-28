@@ -10,7 +10,10 @@ body {
     background-image: url("5112680.jpg");
 
 }
-
+.navbar{
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 3em;
+  }
 .card {
     width: 50%;
     border: none;
