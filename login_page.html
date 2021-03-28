@@ -170,7 +170,10 @@
                                     <label><b>Password</b></label><br>
                                     <input type="password" placeholder="Enter Password" id="password" required><br><br>
                                     
-
+                                    <script>
+                                        var firstname = document.getElementById("fname");
+                                        window.localStorage.setItem("first_name", firstname.value);
+                                    </script>
 
                                     <label for="country">Country</label>
 
