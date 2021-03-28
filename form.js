@@ -34,7 +34,7 @@ function Ready(){
  var currentUser = firebase.auth().currentUser;
  function saveData(){
     
-    firebase.database().ref("Users").push().set({
+    firebase.database().ref().push().set({
         fname: document.getElementById("fname").value,
          lname: document.getElementById("lname").value,
        email_fb: document.getElementById("email").value,
