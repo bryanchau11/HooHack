@@ -1,123 +1,3 @@
-<!-- <!DOCTYPE html>
-<html>
-
-<head>
-    <title>Care19Diary</title>
-    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.js">
-         
-    <script src="data.js"></script>
-    <script src="data2.js"></script>
-    </script> 
-    <script>
-        src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"
-    </script>
-    <script src="form2.js"></script>
-    <link rel="stylesheet" href="mystyle.css">
-     
-    
-    <style>
-        table {
-            margin: 0 auto;
-            font-size: large;
-            border: 1px solid black;
-        }
-  
-        h1 {
-            text-align: center;
-            color: #006600;
-            font-size: xx-large;
-            font-family: 'Gill Sans', 
-                'Gill Sans MT', ' Calibri', 
-                'Trebuchet MS', 'sans-serif';
-        }
-  
-        td {
-            background-color: #E4F5D4;
-            border: 1px solid black;
-        }
-  
-        th,
-        td {
-            font-weight: bold;
-            border: 1px solid black;
-            padding: 10px;
-            text-align: center;
-        }
-  
-        td {
-            font-weight: lighter;
-        }
-    </style>
-    <script>
-        $(document).ready(function () {
-    
-            $.getJSON("records.json", function(data) {
-                var myData = '';
-    
-                $.each(data, function(key, value) {                
-                    myData += '<tr>';
-                    myData += '<td>' + 
-                        value.dateRep + '</td>';
-    
-                    myData += '<td>' + 
-                        value.day + '</td>';
-    
-                    myData += '<td>' + 
-                        value.month + '</td>';
-    
-                    myData += '<td>' + 
-                        value.year + '</td>';
-                    
-                    myData += '<td>' + 
-                        value.cases + '</td>';
-                    
-                    myData += '<td>' + 
-                        value.deaths + '</td>';
-                                        
-                    myData += '<td>' + 
-                        value.countriesAndTerritories + '</td>';
-                                        
-                    myData += '<td>' + 
-                        value.geoId + '</td>';
-                                        
-                    myData += '<td>' + 
-                        value.countryterritoryCode + '</td>';
-                                        
-                    myData += '<td>' + 
-                        value.popData2019 + '</td>';
-                                        
-                    myData += '<td>' + 
-                        value.continentExp + '</td>';
-                    myData += '</tr>';
-                });
-                 
-                $('#myTable').append(myData);
-            });
-        });
-    </script>
-</head>
-
-<body>
-     <div class="logo">
-        <img src="vaccine.png" width="230">
-    </div>
-
-
-   <div class="flourish-embed flourish-chart" data-src="story/767666">
-        <script src="data.js"></script>
-    </div>
-    <div class="flourish-embed flourish-map" data-src="story/225979"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-
-      <a href="login.html" class="model">&#8250; Login</a>
-    <a href="javascript:void(0);" onclick="signOut()" class="model"> &#8250; Sign Out</a>
-
-
-
-</body>
-
-</html> -->
 
 <!DOCTYPE html>
 <html>
@@ -133,12 +13,17 @@
 
 <body>
     <div class ="login_logout">
-        <a href="data.html" class = "data" >data</a>
-        <a href="login_page.html" class="model">Login</a>
-        <a href="javascript:void(0);" onclick="signOut()" class="model"> Sign Out</a>
+        <a href="login_page.html" class="navbar_link">LOGIN</a>
+        <a href="javascript:void(0);" onclick="signOut()" class="navbar_link">SIGNOUT</a>
+        <a href="profile.html" class = "navbar_link" >PROFILE</a>
+        <a href="data.html" class = "navbar_link" >DATA</a>
+
+
+
+
         </div>
     <div class="logo">
-        <img src="vaccine.png" width="230">
+        <img src="vaccine.png" class ="vaccine_logo" width="230">
     </div>
 
 
