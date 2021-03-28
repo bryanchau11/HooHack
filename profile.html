@@ -28,44 +28,31 @@
     </div>
     <div class="container mt-5 d-flex justify-content-center">
         <div class="card">
-            <div class="image"> <img
-                    src="https://www.kindpng.com/picc/m/269-2697881_computer-icons-user-clip-art-transparent-png-icon.png"
-                    class="rounded" width="200"> </div>
-            <div class="user_info">
-                <ul class="users">
-                    <li class="user" id="lname">Hoo </li>
-                    <li class="user" id="fname">Hack</li>
-                    <li class="user" id="email">hoohack@gmail.com</li>
-                    <li class="user" id="country">USA</li>
-                    <li class="user" id="dob">1/1/1990</li>
-                    <li class="user" id="firstdoe">02/23/2021</li>
-                    <li class="user" id="seconddoe">03/23/2021</li>
-                </ul>
-                <div class=QR_CODE>
-                    <button onclick="sweet()" type="button" class="qrbutton"> try </button>
-                    <script>
-                        function sweet() {
+            <div class="image"> <img src="https://www.kindpng.com/picc/m/269-2697881_computer-icons-user-clip-art-transparent-png-icon.png" class="rounded" width="200"> </div>
+                <div class = "user_info">
+                    <ul class="users">
+                        <li class="user">Last Name</li>
+                        <li class="user">First Name</li>
+                        <li class="user">Email</li>
+                        <li class="user">Country</li>
+                        <li class="user">First dose</li> 
+                        <li class="user">Second dose</li>
+                    </ul>
+                    <div class = QR_CODE>
+                        <button onclick = "sweet()" type="button" class = "qrbutton"> My QR Code </button>
+                        <script>
+                        function sweet(){  
                             Swal.fire({
-                                title: 'Here is your qrcode',
-                                imageUrl: 'QR.svg',
-                                imageWidth: 400,
-                                imageHeight: 200,
-                                imageAlt: 'QR CODE',
+                            title: 'Here is your qrcode',
+                            imageUrl: 'QR.svg',
+                            imageWidth: 400,
+                            imageHeight: 200,
+                            imageAlt: 'QR CODE',
+                            
                             })
                         }
-                    </script>
-                </div>
-
-                document.getElementById("fname").innerHTML = snapshot.val().fname;
-                });
-                }
-                else {
-                console.log("no user!!!");
-                }
-                }); */
-                </script>
-                <div class=QR_CODE>
-                    <a href="qr.html" class="QR">My QRcode</a>
+                        </script>                   
+                        </div>
                 </div>
 
             </div>

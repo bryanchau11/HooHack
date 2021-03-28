@@ -4,10 +4,11 @@ body {
     background-attachment: fixed;
     /* font-family: 'Courier New', Courier, monospace; */
     font-family: 'Padauk', sans-serif;
-    background-color: #00202E;
+    /* background-color: #00202E; */
+    background-color: #51A2DA;
     color: navy;
     border-radius: 10px;
-    background-image: url("5112680.jpg");
+    /* background-image: url("5112680.jpg"); */
 
 }
 .navbar{
@@ -18,7 +19,7 @@ body {
     width: 50%;
     border: none;
     border-radius: 10px;
-    background-color: #fff;
+    background-color: #c3d0e9;
     padding: 0;
     text-align: center;
     margin: 0;
