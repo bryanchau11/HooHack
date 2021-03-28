@@ -5,24 +5,24 @@
     <title>Care19Diary</title>
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Amatic+SC:wght@400;700&family=Shadows+Into+Light&display=swap"
         rel="stylesheet">
+    <script src="//cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
+    <script src="sweetalert2.all.min.js"></script>
     <link rel="stylesheet" href="mystyle.css">
     <link rel="stylesheet" href="profile.css">
     <script src="form2.js"></script>
     <script src="data.js"></script>
-    
 </head>
 
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+
     <div class="login_logout">
         <a href="index.html" class="navbar">Care19Diary</a>
         <a href="login_page.html" class="navbar_link">LOGIN</a>
         <a href="javascript:void(0);" onclick="signOut()" class="navbar_link">SIGNOUT</a>
-        <a href="qr.html" class="navbar_link">QR</a>
-
         <a href="profile.html" class="navbar_link">PROFILE</a>
         <a href="data.html" class="navbar_link">DATA</a>
     </div>
@@ -41,35 +41,28 @@
                     <li class="user" id="firstdoe">02/23/2021</li>
                     <li class="user" id="seconddoe">03/23/2021</li>
                 </ul>
-                <script>
-                    var storedValue = JSON.parse(window.localStorage.getItem("first_name"));
-                    document.getElementById("fname").innerHTML = storedValue;
-                   /* var firebaseConfig = {
-                        apiKey: "AIzaSyAdjo3bQmZ3irfMS8lPOX4ytXM4g4jm8NA",
-                        authDomain: "hoohack-a4b13.firebaseapp.com",
-                        databaseURL: "https://hoohack-a4b13-default-rtdb.firebaseio.com",
-                        projectId: "hoohack-a4b13",
-                        storageBucket: "hoohack-a4b13.appspot.com",
-                        messagingSenderId: "725227209207",
-                        appId: "1:725227209207:web:26b9c58b24ebd5a1c2aef2"
-                    };
-                    // Initialize Firebase
-                    firebase.initializeApp(firebaseConfig);
-                    
-                    firebase.auth().onAuthStateChanged(function (user) {
-                        if (user) {
-                            var user1 = firebase.auth().currentUser;
-                            var uid = user1.uid;
-
-                            firebase.database().ref().child(uid).on('value', function (snapshot) {
-
-                                document.getElementById("fname").innerHTML = snapshot.val().fname;
-                            });
+                <div class=QR_CODE>
+                    <button onclick="sweet()" type="button" class="qrbutton"> try </button>
+                    <script>
+                        function sweet() {
+                            Swal.fire({
+                                title: 'Here is your qrcode',
+                                imageUrl: 'QR.svg',
+                                imageWidth: 400,
+                                imageHeight: 200,
+                                imageAlt: 'QR CODE',
+                            })
                         }
-                        else {
-                            console.log("no user!!!");
-                        }
-                    }); */
+                    </script>
+                </div>
+
+                document.getElementById("fname").innerHTML = snapshot.val().fname;
+                });
+                }
+                else {
+                console.log("no user!!!");
+                }
+                }); */
                 </script>
                 <div class=QR_CODE>
                     <a href="qr.html" class="QR">My QRcode</a>

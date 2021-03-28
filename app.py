@@ -4,6 +4,6 @@ from pyqrcode import QRCode
 
 QRstring = "https://codd.cs.gsu.edu/~nchau1/HooHack/profile.html"
 url = pyqrcode.create(QRstring)
-url.png('qrcodeyoutube.png', scale = 8)
+url.png('user.png', scale = 8)
 
 
