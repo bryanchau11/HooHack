@@ -2,7 +2,8 @@ body {
     /* background-image: url(background.jpg); */
     background-size: cover;
     background-attachment: fixed;
-    font-family: 'Courier New', Courier, monospace;
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-family: 'Padauk', sans-serif;
     background-color: #00202E;
     color: navy;
 }
