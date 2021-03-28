@@ -41,7 +41,7 @@
      if (user) {
 
          var email = user.email;
-         alert("Active User " + email);
+         
 
          //Take user to a different or home page
          window.location = "index.html";
