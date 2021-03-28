@@ -9,18 +9,68 @@
   };
  // Initialize Firebase
  firebase.initializeApp(firebaseConfig);
-
- const auth = firebase.auth();
-
+ const email = document.getElementById("email");
+ const password = document.getElementById("password");
+ const first_name = document.getElementById("fname");
+ const last_name = document.getElementById("lname");
+ const saveInfo = document.getElementById("saveInfo");
+ const country = document.getElementById("country");
+  const date_of_birth = document.getElementById("dob");
+function Ready(){
+    fname: document.getElementById("fname").value;
+    lname: document.getElementById("lname").value;
+    email_fb: document.getElementById("email").value;
+  country: document.getElementById("country").value;
+}
+/* document.getElementById('saveInfo').onclick = function() {
+    Ready();
+     firebase.database().ref('Users/' + date_of_birth.value).push().set({
+            first_name: fname,
+            last_name: lname,
+            user_email: email_fb,
+            user_country: country
+     });
+ } */
+ var currentUser = firebase.auth().currentUser;
+ function saveData(){
+    
+    firebase.database().ref("Users").push().set({
+        fname: document.getElementById("fname").value,
+         lname: document.getElementById("lname").value,
+       email_fb: document.getElementById("email").value,
+       country: document.getElementById("country").value
+       
+     });
+     alert("Signed Up and Information is saved");
+} 
+/*const database = firebase.database();
+const root = database.ref('users');
+function saveData(){
+    root.child(email.value).set({
+        firstname = first_name.value,
+        lastname = last_name.value,
+        user_email = email.value,
+        user_country = country.value
+    });
+    alert("Signed Up and Information is saved");
+};
+   */
+const auth = firebase.auth();
  function signUp() {
 
-     var email = document.getElementById("email");
-     var password = document.getElementById("password");
-
+    var email = document.getElementById("email");
+    var password = document.getElementById("password");
      const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
      promise.catch(e => alert(e.message));
-
-     alert("Signed Up");
+     
+     firebase.database().ref("Users").push().set({
+        fname: document.getElementById("fname").value,
+         lname: document.getElementById("lname").value,
+       email_fb: document.getElementById("email").value,
+       country: document.getElementById("country").value,
+       dateOfBirth: document.getElementById("dob").value
+     });
+     alert("Signed Up and Information is saved");
 
 
  }

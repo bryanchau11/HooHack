@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
 
     <script src="form.js"></script>
     <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
@@ -31,7 +32,7 @@
             margin-right: auto;
             text-align: center;
         }
-
+        input[type=number],
         input[type=text],
         input[type=email],
         input[type=password],
@@ -143,7 +144,7 @@
                 <div class="row">
 
                     <div class="column">
-                        <div class="modal-content animate">
+                        <div class="modal-content animate" method="post">
                             <fieldset>
                                 <legend><em>SIGN UP PLEASE</em></legend>
                                 <section style="width: 95%;">
@@ -157,9 +158,12 @@
                                     <label for="lname">Last Name</label>
                                     <input type="text" id="lname" name="lastname" placeholder="Your last name.."
                                         required>
+                                    <label for="dob">Data of Birth (format: MMDDYYYY)</label>
+                                    <input type="number" id="dob" name="dateofbirth" placeholder="Your data of birth.."
+                                            required>
 
                                     <label>Your e-mail</label><br>
-                                    <input type="email" id="email" placeholder="name@example.com" required><br><br>
+                                    <input type="email" id="email" placeholder="name@example.com" ><br><br>
 
                                     <label><b>Password</b></label><br>
                                     <input type="password" placeholder="Enter Password" id="password" required><br><br>
@@ -417,6 +421,7 @@
                                         <option value="Zimbabwe">Zimbabwe</option>
                                     </select>
                                     <button onclick="signUp()" id="signUp">Sign Up</button><br>
+                                  <!--  <button onclick="saveData()" id="saveInfo">Save Data</button><br>--> 
                                     <label>
                                         <input type="checkbox" checked="checked" name="remember"
                                             style="margin-bottom:15px"> Remember me
