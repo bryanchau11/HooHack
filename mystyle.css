@@ -81,7 +81,10 @@ a {
     background-color: #272E48;
     color: black;
   }
-
+.navbar{
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 3em;
+}
   .main_data{
     margin: 0;
     position: absolute;
